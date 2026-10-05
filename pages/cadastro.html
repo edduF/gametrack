@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameTrack: organize sua coleção pessoal de jogos.">
+    <title>Cadastrar jogo | GameTrack</title>
+</head>
+<body>
+    <a href="#conteudo">Ir para o conteúdo principal</a>
+    <header>
+        <h1>GameTrack</h1>
+        <p>Organize seus jogos e acompanhe suas próximas aventuras.</p>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="../index.html">Minha coleção</a></li>
+                <li><a href="../pages/cadastro.html">Cadastrar jogo</a></li>
+                <li><a href="../index.html#sobre">Sobre o sistema</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="conteudo">
+        <section aria-labelledby="cadastro-titulo">
+            <h2 id="cadastro-titulo">Cadastrar jogo</h2>
+            <p>Campos marcados com * são obrigatórios.</p>
+            <p id="aviso-cadastro">Formulário demonstrativo: os dados ainda não são salvos.</p>
+            <form aria-describedby="aviso-cadastro">
+                <fieldset>
+                    <legend>Informações do jogo</legend>
+                    <p><label for="nome">Nome do jogo *:</label>
+                        <input type="text" id="nome" name="nome" required maxlength="100"></p>
+                    <p><label for="genero">Gênero *:</label>
+                        <select id="genero" name="genero" required><option value="">Selecione</option><option>RPG</option><option>Corrida</option><option>Aventura</option><option>Ação</option><option>Estratégia</option><option>Esporte</option><option>Outro</option></select></p>
+                    <p><label for="plataforma">Plataforma *:</label>
+                        <select id="plataforma" name="plataforma" required><option value="">Selecione</option><option>PC</option><option>PlayStation</option><option>Xbox</option><option>Nintendo Switch</option><option>Mobile</option><option>Outra</option></select></p>
+                    <p><label for="ano">Ano de lançamento *:</label>
+                        <input type="number" id="ano" name="ano" min="1950" max="2100" step="1" required></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Meu progresso</legend>
+                    <p><label for="status">Status *:</label>
+                        <select id="status" name="status" required><option value="">Selecione</option><option value="quero-jogar">Quero jogar</option><option value="jogando">Jogando</option><option value="finalizado">Finalizado</option></select></p>
+                    <p><label for="avaliacao">Avaliação de 0 a 10:</label>
+                        <input type="number" id="avaliacao" name="avaliacao" min="0" max="10" step="0.5" aria-describedby="ajuda-avaliacao"></p>
+                    <p id="ajuda-avaliacao">Opcional. Deixe em branco caso ainda não tenha avaliado o jogo.</p>
+                    <p><label for="observacoes">Observações:</label><br>
+                        <textarea id="observacoes" name="observacoes" rows="5" cols="40" maxlength="1000" placeholder="Escreva suas impressões ou objetivos."></textarea></p>
+                </fieldset>
+                <!-- A ação de salvar será implementada com JavaScript na Etapa 3. -->
+                <p><button type="button">Salvar jogo</button> <button type="reset">Limpar formulário</button></p>
+            </form>
+            <p><a href="../index.html">Voltar para a coleção</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>GameTrack — Trabalho Prático Individual de Aplicações Web.</p>
+        <p>Etapa 1: estrutura HTML com dados fictícios. Os controles de dados serão implementados posteriormente.</p>
+    </footer>
+</body>
+</html>
