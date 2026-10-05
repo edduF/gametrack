@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameTrack: organize sua coleção pessoal de jogos.">
+    <title>Minha coleção | GameTrack</title>
+</head>
+<body>
+    <a href="#conteudo">Ir para o conteúdo principal</a>
+    <header>
+        <h1>GameTrack</h1>
+        <p>Organize seus jogos e acompanhe suas próximas aventuras.</p>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Minha coleção</a></li>
+                <li><a href="pages/cadastro.html">Cadastrar jogo</a></li>
+                <li><a href="index.html#sobre">Sobre o sistema</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="conteudo">
+        <section aria-labelledby="colecao-titulo">
+            <h2 id="colecao-titulo">Minha coleção</h2>
+            <p>Acompanhe os jogos que deseja jogar, está jogando ou já finalizou.</p>
+            <p><a href="pages/cadastro.html">Adicionar um jogo</a></p>
+            <form aria-label="Pesquisa, filtros e ordenação" aria-describedby="aviso-controles">
+                <fieldset>
+                    <legend>Encontrar jogos</legend>
+                    <p><label for="pesquisa">Pesquisar pelo nome:</label>
+                        <input type="search" id="pesquisa" name="pesquisa" placeholder="Digite o nome do jogo"></p>
+                    <p><label for="filtro-status">Status:</label>
+                        <select id="filtro-status" name="status"><option value="">Todos</option><option value="quero-jogar">Quero jogar</option><option value="jogando">Jogando</option><option value="finalizado">Finalizado</option></select></p>
+                    <p><label for="filtro-genero">Gênero:</label>
+                        <select id="filtro-genero" name="genero"><option value="">Todos</option><option>RPG</option><option>Corrida</option><option>Aventura</option><option>Ação</option><option>Estratégia</option><option>Esporte</option><option>Outro</option></select></p>
+                    <p><label for="ordenacao">Ordenar por:</label>
+                        <select id="ordenacao" name="ordenacao"><option value="nome-asc">Nome: A a Z</option><option value="nome-desc">Nome: Z a A</option><option value="ano-desc">Ano: mais recente</option><option value="nota-desc">Maior avaliação</option></select></p>
+                    <button type="button">Pesquisar e aplicar filtros</button>
+                    <button type="reset">Limpar campos</button>
+                </fieldset>
+            </form>
+            <p id="aviso-controles">Nesta etapa, pesquisa, filtros, ordenação, edição e exclusão são apenas demonstrativos.</p>
+            <table>
+                <caption>Jogos cadastrados — 3 exemplos fictícios. Avaliações de 0 a 10.</caption>
+                <thead><tr><th scope="col">Nome</th><th scope="col">Gênero</th><th scope="col">Plataforma</th><th scope="col">Ano</th><th scope="col">Status</th><th scope="col">Avaliação</th><th scope="col">Ações</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Reino das Estrelas</th><td>RPG</td><td>PC</td><td>2024</td><td>Jogando</td><td>8.5</td>
+                        <td><a href="pages/detalhes.html#jogo-1">Ver detalhes de Reino das Estrelas</a>
+                            <button type="button" aria-label="Editar Reino das Estrelas">Editar</button>
+                            <button type="button" aria-label="Excluir Reino das Estrelas">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Circuito Neon</th><td>Corrida</td><td>PlayStation</td><td>2023</td><td>Finalizado</td><td>9.0</td>
+                        <td><a href="pages/detalhes.html#jogo-2">Ver detalhes de Circuito Neon</a>
+                            <button type="button" aria-label="Editar Circuito Neon">Editar</button>
+                            <button type="button" aria-label="Excluir Circuito Neon">Excluir</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ilha dos Enigmas</th><td>Aventura</td><td>Nintendo Switch</td><td>2025</td><td>Quero jogar</td><td>Não avaliado</td>
+                        <td><a href="pages/detalhes.html#jogo-3">Ver detalhes de Ilha dos Enigmas</a>
+                            <button type="button" aria-label="Editar Ilha dos Enigmas">Editar</button>
+                            <button type="button" aria-label="Excluir Ilha dos Enigmas">Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <aside aria-labelledby="resumo-titulo">
+            <h2 id="resumo-titulo">Resumo da coleção</h2>
+            <ul><li>Quero jogar: 1 jogo</li><li>Jogando: 1 jogo</li><li>Finalizado: 1 jogo</li></ul>
+            <p>Escolha seu próximo jogo e registre suas impressões.</p>
+        </aside>
+        <section id="sobre" aria-labelledby="sobre-titulo">
+            <h2 id="sobre-titulo">Sobre o GameTrack</h2>
+            <p>O GameTrack é um sistema de organização de uma coleção pessoal de jogos. Cada jogo possui nome, gênero, plataforma, ano de lançamento, status, avaliação e observações.</p>
+        </section>
+    </main>
+    <footer>
+        <p>GameTrack — Trabalho Prático Individual de Aplicações Web.</p>
+        <p>Etapa 1: estrutura HTML com dados fictícios. Os controles de dados serão implementados posteriormente.</p>
+    </footer>
+</body>
+</html>
