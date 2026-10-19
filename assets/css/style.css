@@ -483,3 +483,23 @@ textarea:hover {
 button:active {
     transform: scale(0.98);
 }
+/* Ajustes para celulares menores */
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
