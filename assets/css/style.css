@@ -464,3 +464,22 @@ footer {
         margin: 5px 0;
     }
 }
+/* Melhoria dos estados de interação */
+
+a,
+button,
+input,
+select,
+textarea {
+    transition: 0.2s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #a78bfa;
+}
+
+button:active {
+    transform: scale(0.98);
+}
